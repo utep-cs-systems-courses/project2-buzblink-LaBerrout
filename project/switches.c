@@ -84,11 +84,13 @@ switch_interrupt_handler()
       red_on = 0;
       led_update();
       tada(2);
+      last_state = 0;
     } else{
       green_on = 0;
       red_on = 1;
       led_update();
       tada(1);
+      last_state = 1;
     }
      
   }
