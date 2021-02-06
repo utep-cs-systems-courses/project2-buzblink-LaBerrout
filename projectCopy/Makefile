@@ -10,8 +10,8 @@ AS              = msp430-elf-as
 
 all: project.elf 
 
-#additional rules for files
-project.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o led.o switches.o buzzer.o Main.o ../lib/libTimer.a
+#additional rules for files  ---reference to libTimer.h instead 
+project.elf: ${COMMON_OBJECTS} p1_interrupt_handler.o led.o switches.o buzzer.o Main.o ../demos/lib/libTimer.a
 	${CC} ${CFLAGS} ${LDFLAGS} -o $@ $^
 
 load: project.elf
